@@ -113,6 +113,7 @@ The minimum set of permissions needed for `letsencrypt-aws` to work is:
 * `iam:ListServerCertificates`
 * `iam:UploadServerCertificate`
 * `iam:GetServerCertificate`
+* `iam:UpdateServerCertificate`
 
 If your `acme_account_key` is provided as an `s3://` URI you will also need:
 
@@ -157,7 +158,8 @@ An example IAM policy is:
             "Action": [
                 "iam:ListServerCertificates",
                 "iam:GetServerCertificate",
-                "iam:UploadServerCertificate"
+                "iam:UploadServerCertificate",
+                "iam:UpdateServerCertificate"
             ],
             "Resource": [
                 "*"
